@@ -1,0 +1,74 @@
+{
+  "name": "sms-gg-sg-1000-to-nes-sound-converter",
+  "version": "1.0.0",
+  "description": "A modern web application for converting SMS/GG/SG-1000 sound and music files to NES format with real-time audio playback",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:wasm": "wasm-pack build --target web --release wasm",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,css}\"",
+    "type-check": "tsc --noEmit",
+    "ci": "npm run type-check && npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.0",
+    "wasm-bindgen": "^0.2.87"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "@vitest/ui": "^1.1.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.31",
+    "prettier": "^3.1.0",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vite-plugin-wasm": "^3.3.0",
+    "vitest": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "audio",
+    "conversion",
+    "SMS",
+    "Game Gear",
+    "SG-1000",
+    "NES",
+    "WebAssembly",
+    "WASM",
+    "React",
+    "TypeScript",
+    "web-audio",
+    "music-converter",
+    "sound-converter"
+  ],
+  "author": "toaster2192-collab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toaster2192-collab/SMS-GG-SG-1000-to-NES-Sound-Music-Converter.git"
+  }
+}
