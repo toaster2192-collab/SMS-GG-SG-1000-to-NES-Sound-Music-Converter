@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS/GG/SG-1000 to NES Sound Music Converter</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SMS/GG/SG-1000 to NES Sound Music Converter</h1>
+            <p class="subtitle">Convert sound and music files from Sega Master System, Game Gear, and SG-1000 to NES format</p>
+        </header>
+
+        <main>
+            <section class="converter-section">
+                <h2>Audio Converter</h2>
+                
+                <div class="input-group">
+                    <label for="file-input">Select Audio File:</label>
+                    <input type="file" id="file-input" accept=".vgm,.vgz,.bin,.sms,.gg,.sg">
+                </div>
+
+                <div class="options-group">
+                    <h3>Conversion Options</h3>
+                    
+                    <div class="option">
+                        <label for="source-system">Source System:</label>
+                        <select id="source-system">
+                            <option value="sms">Sega Master System (SMS)</option>
+                            <option value="gg">Game Gear (GG)</option>
+                            <option value="sg1000">SG-1000</option>
+                            <option value="auto">Auto-detect</option>
+                        </select>
+                    </div>
+
+                    <div class="option">
+                        <label for="output-format">Output Format:</label>
+                        <select id="output-format">
+                            <option value="nes">NES</option>
+                            <option value="vgm">VGM (Video Game Music)</option>
+                        </select>
+                    </div>
+
+                    <div class="option">
+                        <label>
+                            <input type="checkbox" id="preserve-timing" checked>
+                            Preserve Original Timing
+                        </label>
+                    </div>
+
+                    <div class="option">
+                        <label>
+                            <input type="checkbox" id="normalize-audio">
+                            Normalize Audio Levels
+                        </label>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="convert-btn" class="btn btn-primary">Convert</button>
+                    <button id="reset-btn" class="btn btn-secondary">Reset</button>
+                </div>
+            </section>
+
+            <section class="output-section" id="output-section" style="display: none;">
+                <h2>Conversion Result</h2>
+                
+                <div class="progress-container" id="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p id="progress-text">Processing...</p>
+                </div>
+
+                <div class="result-container" id="result-container" style="display: none;">
+                    <p id="result-message"></p>
+                    <div class="download-section">
+                        <a id="download-link" class="btn btn-success" style="display: none;">Download Converted File</a>
+                    </div>
+                </div>
+
+                <div class="error-container" id="error-container" style="display: none;">
+                    <p id="error-message"></p>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>About This Converter</h2>
+                <p>This tool allows you to convert audio and music files from classic Sega systems to NES format, enabling preservation and compatibility across different retro gaming platforms.</p>
+                
+                <h3>Supported Input Formats:</h3>
+                <ul>
+                    <li>VGM (Video Game Music)</li>
+                    <li>VGZ (Compressed VGM)</li>
+                    <li>SMS ROM files</li>
+                    <li>Game Gear ROM files</li>
+                    <li>SG-1000 ROM files</li>
+                </ul>
+
+                <h3>Output Formats:</h3>
+                <ul>
+                    <li>NES-compatible audio format</li>
+                    <li>VGM (for preservation)</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 SMS/GG/SG-1000 to NES Sound Music Converter. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
